@@ -1,10 +1,31 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="row text-center">
-    <h1>Country Guessing Game</h1>
-</div>
-<div class="row text-center col-4">
-    <img src="static/assets/country-flags/Africa/Algeria.svg" class="rounded">
+<div class="container text-center">
+    <div class="row mb-4">
+        <div class="col">
+            <h1>Country Guessing Game</h1>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col">
+            <img src="static/assets/country-flags/Africa/Algeria.svg"
+                 class="img-fluid rounded mx-auto d-block"
+                 style="max-width: 30%;">
+        </div>
+    </div>
+
+    <!-- Centered Form -->
+    <div class="container">
+        <div class="col-sm">
+            <form method="POST" action="{{ url_for('country_from_flag') }}" class="d-flex flex-column align-items-center">
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="country-name-input" placeholder="Enter country name">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </form>
+        </div>
+    </div>
 </div>
 {% endblock %}
