@@ -6,10 +6,6 @@ import pandas
 
 app = Flask(__name__)
 Bootstrap(app)
-df = pandas.read_csv("static/data/countries.csv")
-# print(df["Continent"])
-test_df = df.loc[df.Continent == "europe"]
-print(test_df)
 
 @app.route('/')
 def home():
