@@ -10,7 +10,7 @@
 
     <div class="row mb-4">
         <div class="col">
-            <img src="static/assets/country-flags/Africa/Algeria.svg"
+            <img src={{ flag_path }}
                  class="img-fluid rounded mx-auto d-block"
                  style="max-width: 30%;">
         </div>
@@ -19,7 +19,7 @@
     <!-- Centered Form -->
     <div class="container">
         <div class="col-sm">
-            <form method="POST" action="{{ url_for('country_from_flag') }}" class="d-flex flex-column align-items-center">
+            <form method="POST" action="{{ url_for('country_from_flag.country_from_flag') }}" class="d-flex flex-column align-items-center">
                 <div class="mb-3">
                     <input type="text" class="form-control" name="country-name-input" placeholder="Enter country name">
                 </div>
