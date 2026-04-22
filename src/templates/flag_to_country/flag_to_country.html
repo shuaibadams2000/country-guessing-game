@@ -20,9 +20,17 @@
     <div class="container">
         <div class="col-sm">
             <form method="POST" action="{{ url_for('country_from_flag.country_from_flag') }}" class="d-flex flex-column align-items-center">
+                <p>Score {{ correct_guesses }}/{{ total_guesses }}</p>
                 <div class="mb-3">
                     <input type="text" class="form-control" name="country-name-input" placeholder="Enter country name" autofocus>
                 </div>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                        <p>{{ message }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
                 <button type="submit" class="btn btn-primary w-100">Submit</button>
             </form>
         </div>
