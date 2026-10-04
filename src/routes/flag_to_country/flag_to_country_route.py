@@ -5,7 +5,8 @@ from pandas import read_csv
 country_from_flag_bp = Blueprint('country_from_flag', __name__, template_folder='templates')
 
 flag_to_country_utils = FlagToCountryUtils(read_csv("static/data/countries.csv"))
-all_countries = flag_to_country_utils.get_all_countries_in_continent("africa")
+# all_countries = flag_to_country_utils.get_all_countries_in_continent("africa")
+all_countries = flag_to_country_utils.get_all_countries_in_continent("europe")
 all_countries = flag_to_country_utils.randomise_countries(all_countries)
 list_of_countries = flag_to_country_utils.to_list(all_countries)
 
