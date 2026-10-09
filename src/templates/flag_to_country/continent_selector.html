@@ -1,8 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Test</h1>
 <div class="container text-center">
-
+    <h1>Select a continent</h1>
+    <div>
+        <input type="radio" id="europe" name="continent-selector-radio">
+        <label for="europe">Europe</label>
+        <br>
+        <input type="radio" id="africa" name="continent-selector-radio">
+        <label for="africa">Africa</label>
+        <br>
+        <input type="radio" id="asia" name="continent-selector-radio">
+        <label for="asia">Asia</label>
+        <br>
+        <input type="radio" id="north-america" name="continent-selector-radio">
+        <label for="north-america">North America</label>
+        <br>
+        <input type="radio" id="south-america" name="continent-selector-radio">
+        <label for="south-america">South America</label>
+    </div>
 </div>
 {% endblock %}
